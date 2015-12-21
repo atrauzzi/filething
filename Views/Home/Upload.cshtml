@@ -1,0 +1,24 @@
+﻿@model FileThing.Http.HomeUploadModel
+
+<html>
+
+<head>
+	<title>File Thing</title>
+</head>
+
+<body>
+
+	<h1>File Thing</h1>
+
+	<p>You uploaded this.</p>
+
+	<ul>
+		<li>@Model.Name @Html.ValidationMessageFor(model => model.Name)</li>
+		<li>@Model.Thing.ContentType</li>
+		<li>@Model.Thing.Length</li>
+		<li>@Model.Thing.ToString()</li>
+	</ul>
+
+</body>
+
+</html>

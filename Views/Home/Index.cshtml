@@ -1,0 +1,29 @@
+﻿@model string
+
+<html>
+
+	<head>
+		<title>File Thing</title>
+	</head>
+
+	<body>
+	
+		<div id="header">
+			<ul>
+				<li><a href="@Url.RouteUrl("login")">Login</a></li>
+			</ul>
+		</div>
+
+		<h1>File Thing</h1>
+		
+		<p>Let's learn about ASP.NET!</p>
+	
+		<form action="@Url.RouteUrl("upload")" method="post" enctype="multipart/form-data">
+			<input type="text" name="name" />
+			<input type="file" name="thing" />
+			<button>Upload</button>
+		</form>
+
+	</body>
+
+</html>

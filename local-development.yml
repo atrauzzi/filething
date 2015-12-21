@@ -1,0 +1,12 @@
+﻿# /c/Program\ Files/Oracle/VirtualBox/VBoxManage modifyvm "default" --natpf1 "app,tcp,,5432,,5432"
+database:
+  container_name: filething_database
+  image: postgres
+
+  environment:
+    POSTGRES_USER: filething
+    POSTGRES_PASSWORD: filething
+    POSTGRES_DB: filething
+
+  ports:
+    - "5432:5432"
